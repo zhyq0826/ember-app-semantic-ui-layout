@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('domain');
+  this.route('computer');
+  this.route('app');
 });
 
 export default Router;

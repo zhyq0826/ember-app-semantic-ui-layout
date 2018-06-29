@@ -48,7 +48,7 @@ export default Mixin.create(model, {
             dataType: 'json',
             timeout: 10000      
         }
-        this.on('ajaxError', (error, ajaxSettings, /*jqxhr*/) => { // jshint ignore:line
+        this.on('ajaxError', (/*error, ajaxSettings, jqxhr*/) => { // jshint ignore:line
             get(this, 'flashMessages').warning('网络请求错误，请重试');
         });
 

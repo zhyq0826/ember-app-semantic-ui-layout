@@ -1,5 +1,47 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="ui grid">
+    <div class="two wide column">
+        <div class="ui vertical menu" >
+            <a href="" class="item">
+                <h2 class="ui green header">
+                    <i class="cube icon"></i>
+                    ESPIRE
+                </h2>
+            </a>
+            <a  class="item">
+                <i class="home icon"></i>
+                Dashboard
+            </a>
+            {{#link-to "domain" class="item" }}
+                <i class="cube icon"></i>
+                Domain
+            {{/link-to}}
+            {{#link-to "computer" class="item" }}
+                <i class="server icon"></i>
+                Computer
+            {{/link-to}}
+            {{#link-to "app" class="item" }}
+                <i class="cubes icon"></i>
+                APPS
+            {{/link-to}}
+        </div>              
+    </div>
+    <div class="fourteen wide column">
+        <div class="row">
+            <div class="ui large menu">
+                <a class="item js-item-siderbar" >
+                    <i class="icon th"></i>
+                </a>
+                <div class="ui category search item">
+                    <div class="ui transparent icon input">
+                      <input class="prompt" type="text" placeholder="Search animals...">
+                      <i class="search link icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+            </div>
+            <div class="row">
+                {{outlet}}
+            </div>
+        </div>
+    </div>
+</div>

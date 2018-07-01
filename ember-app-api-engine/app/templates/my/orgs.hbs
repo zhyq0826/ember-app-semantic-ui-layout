@@ -1,0 +1,16 @@
+<div class="ui grid">
+    <div class="column">
+        <div class="ui items">
+            {{#each model as |org|}}
+                <div class="item">
+                    <div class="ui tiny image">
+                      <img src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=460">
+                    </div>
+                    <div class="middle aligned content">
+                        {{#link-to "organization-detail" org.name class="header" }}{{org.name}}{{/link-to}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>    
+</div>

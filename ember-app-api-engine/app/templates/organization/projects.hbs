@@ -1,0 +1,18 @@
+<div class="ui grid">
+    {{#ui-column wide=4 }}
+        <div class="ui segment cc-project-segment" >
+            <div class="ui items" style="background:#f1f1f1" >
+            {{#each model.projects as |project|}}
+                {{#ui-project-item model=project orgName=model.orgName }}{{/ui-project-item}}
+            {{/each}}
+            </div>
+        </div>
+    {{/ui-column}}
+
+    {{#ui-column wide=12 }}
+        <div class="ui segment">
+            {{outlet}}
+        </div>
+    {{/ui-column}}
+</div>
+

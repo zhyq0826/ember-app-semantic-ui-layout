@@ -1,0 +1,15 @@
+{{#each model as |obj|}}
+<div class="fields">
+    {{ui-form-input placeholder="name" }}
+    {{ui-form-input placeholder="description" class="six wide" }}
+    <div class="field">
+        <button class="ui basic red button" {{action "removeForm" obj}}  >
+            <i class="icon delete" ></i>
+        </button>
+    </div>
+</div>
+{{/each}}
+<button class="ui button" {{action "addNewForm"}} >
+    <i class="plus icon" ></i>
+    Add
+</button>

@@ -1,0 +1,19 @@
+<h3 class="ui dividing header">
+  Organizations
+  <button class="ui right floated basic button" style="margin-top:-14px" >+ New Organization</button>
+</h3>
+<div class="ui items">
+    {{#each model as |org|}}
+        <div class="item">
+            <div class="ui tiny image">
+              <img src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=460">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                {{#link-to "project" org.name }}{{org.name}}{{/link-to}}
+              </div>
+              <button class="ui right floated basic button" >Leave</button>
+            </div>
+        </div>
+    {{/each}}
+</div>

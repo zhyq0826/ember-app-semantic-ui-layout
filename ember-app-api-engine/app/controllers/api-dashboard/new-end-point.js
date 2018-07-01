@@ -1,0 +1,67 @@
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+    methodOptions: [
+        {
+            'name':'post',
+            'value':'post'
+        },
+        {
+            'name':'put',
+            'value':'put'
+        },
+        {
+            'name':'patch',
+            'value':'patch'
+        },
+        {
+            'name':'delete',
+            'value':'delete'
+        },
+        {
+            'name':'copy',
+            'value':'copy'
+        },
+        {
+            'name':'head',
+            'value':'head'
+        },
+        {
+            'name':'link',
+            'value':'link'
+        },
+        {
+            'name':'unlink',
+            'value':'unlink'
+        },
+        {
+            'name':'purge',
+            'value':'purge'
+        },
+        {
+            'name':'lock',
+            'value':'lock'
+        },
+        {
+            'name':'unlock',
+            'value':'unlock'
+        },
+        {
+            'name':'options',
+            'value':'options'
+        }],
+    groupOptions: [
+        {
+            'name':'todos',
+            'value':'todos'
+        },
+        {
+            'name':'mist',
+            'value':'mist'
+        },
+        {
+            'name':'models',
+            'value':'models'
+        },
+    ]
+});

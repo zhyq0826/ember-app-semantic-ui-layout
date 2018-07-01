@@ -1,0 +1,32 @@
+<div class="ui blue segment" style="box-shadow:none;border-top:3px solid #2185D0;padding-left:0;padding-right:0;padding-bottom:0;border-bottom:none" >
+    <div class="ui items">
+        <div class="item" style="margin-left:15px;" >
+            <div class="ui tiny image">
+                <img src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=460">
+            </div>
+            <div class="content">
+                <div class="header">martin</div>
+                <div class="meta">
+                    <span>role: weiche</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- <div class="ui secondary pointing menu">
+        <a href="" class="item">
+            <i class="users icon" ></i>
+            members
+        </a>
+        <a href="" class="item">
+            <i class="settings icon"></i>
+            setting
+        </a>
+    </div> --}}
+    <div class="ui fluid vertical menu" style="box-shadow:none;border-radius:0;border-left:none;border-right:none" >
+        {{#each projects as |project|}}
+            {{#link-to "api-detail" project.owner_name project.name class="link text item" }}
+                {{project.name}}
+            {{/link-to}}
+        {{/each}}
+    </div>
+</div>

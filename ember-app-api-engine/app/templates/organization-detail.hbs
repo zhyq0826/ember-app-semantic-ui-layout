@@ -1,0 +1,42 @@
+<div class="ui grid" style="background: #fafbfc;border-bottom: 1px solid #eee"  >
+    <div class="one column row" >
+        <div class="column">
+            <div class="ui container" style="padding-left:0" >
+                <div class="ui basic items">
+                    <div class="item" >
+                        <div class="ui tiny image">
+                          <img src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=460">
+                        </div>
+                        <div class="content">
+                            <h1 class="ui header">wecatch</h1>
+                            <div class="meta">
+                                <span>
+                                    <i class="map pin icon"></i>
+                                    北京
+                                </span>
+                                <span>
+                                    <i class="link icon" ></i>
+                                    <a href="http://sanyuesha.com">http://sanyuesha.com</a>
+                                </span>
+                            </div>
+                            <div class="description">
+                                互联网
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="one column row" style="padding-bottom: 0" >
+        <div class="ui container">
+            <div class="ui tabular large menu" style="border-bottom: none" >
+                {{#link-to "organization-detail.workspace" "wecatch" class="item" }}Workspaces{{/link-to}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui container">
+    <div style="height:40px" ></div>
+    {{outlet}}
+</div>

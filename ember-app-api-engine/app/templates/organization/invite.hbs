@@ -1,0 +1,49 @@
+<div class="ui container">
+    <div class="ui fluid ordered steps">
+      <div class="completed step">
+        <div class="content">
+          <div class="title">Step 1:</div>
+          <div class="description">Set up the organization</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Step 2:</div>
+          <div class="description">Invite members</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui form">
+        <p>
+            Search by username, full name or email address
+        </p>
+        {{ui-form-input label="name"}}
+        <div class="ui big selection list">
+            <div class="item">
+                <div class="right floated content">
+                  <i class="icon delete"></i>
+                </div>
+                <img  class="ui tiny image" src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=460">
+                <div class="content">
+                    <div class="header">  
+                        <a>jerryshew</a>
+                        <label class="ui label">invited</label>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="right floated content">
+                  <i class="icon delete"></i>
+                </div>
+                <img  class="ui tiny image" src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=460">
+                <div class="content">
+                    <div class="header">  
+                        <a>jerryshew</a>
+                        <label class="ui label">invited</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="ui green button" {{action "inviteFinish"}} >Continue</button>
+    </div>
+</div>

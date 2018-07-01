@@ -1,0 +1,22 @@
+<div class="ui container">
+    <div class="ui form">
+        <div class="ui header">
+            创建新的 workspace
+        </div>
+        <div>
+            <p>
+                Workspace 是逻辑上的 api 组织，一个 workspace 可能包含一组或多组api
+            </p>
+        </div>
+        <div class="ui divider"></div>
+        <div class="fields">
+            <div class="field">
+                <label for="">Owner</label>
+                {{ui-select options=model.orgs valuePath="id" value=(mut id)}}
+            </div>
+            {{ui-form-input label="name"}}
+        </div>
+        {{ui-form-input label="description(optional)"}}
+        <button class="ui green button" {{action "createWorkspace"}} >Create new workspace</button>
+    </div>
+</div>

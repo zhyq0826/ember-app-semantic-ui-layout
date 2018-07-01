@@ -1,0 +1,28 @@
+{{#ui-form}}
+    {{#ui-input theme="fluid icon" onChange=(action "searchValueChange") }}
+        <i class="search icon"></i>
+    {{/ui-input}}
+{{/ui-form}}
+<div class="ui divided items">
+    {{#unless filterModel}}
+      <div class="ui message">
+          No more projects match
+      </div>
+    {{/unless}}
+    {{#each filterModel as |project|}}
+        <div class="item">
+            <div class="middle aligned content">
+              <div class="header">
+                {{#link-to "project-detail" project.owner_name project.name }}{{project.name}}{{/link-to}}
+              </div>
+              <div class="description">
+                  {{project.description}}
+              </div>
+              <div class="meta">
+                    <span>Last Updated: 18 hours ago</span>
+                    <span>Last request status: Ok </span>
+              </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

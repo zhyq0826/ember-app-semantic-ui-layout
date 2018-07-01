@@ -1,0 +1,63 @@
+<div class="ui container">
+    <div class="ui grid">
+        <div class="row">
+            <div class="column">
+                <div class="ui big breadcrumb">
+                    <a class="section">zhyq0826</a>
+                    <i class="right chevron icon divider"></i>
+                    <div class="section">tornado-lab</div>
+                    <i class="right chevron icon divider"></i>
+                    <div class="active section">api design</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{#ui-column wide=4 }}
+                <div class="ui selection list">
+                    {{#link-to "api-dashboard.env" class="item" }}
+                        <i class="plus icon"></i>
+                        <div class="content">
+                            <div class="header">
+                                Environment
+                            </div>
+                        </div>
+                    {{/link-to}}
+                    {{#link-to "api-dashboard.new-end-point" class="item" }}
+                        <i class="plus icon"></i>
+                        <div class="content">
+                            <div class="header">
+                                New end point
+                            </div>
+                        </div>
+                    {{/link-to}}
+                    {{#link-to "api-dashboard.new-model" class="item" }}
+                        <i class="plus icon"></i>
+                        <div class="content">
+                            <div class="header">
+                                New model
+                            </div>
+                        </div>
+                    {{/link-to}}
+                    {{#link-to "api-dashboard.new-group" class="item" }}
+                        <i class="plus icon"></i>
+                        <div class="content">
+                            <div class="header">
+                                New Group
+                            </div>
+                        </div>
+                    {{/link-to}}
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment cc-project-segment" >
+                    {{#each model.groups as |group|}}
+                        {{#ui-group-item model=group }}{{/ui-group-item}}
+                    {{/each}}
+                </div>
+            {{/ui-column}}
+
+            {{#ui-column wide=12 }}
+                {{outlet}}
+            {{/ui-column}}
+        </div>
+    </div>
+</div>

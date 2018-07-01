@@ -1,0 +1,33 @@
+<div class="ui container">
+    <div class="ui fluid ordered steps">
+      <div class="active step">
+        <div class="content">
+          <div class="title">Step 1:</div>
+          <div class="description">Set up the organization</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="content">
+          <div class="title">Step 2:</div>
+          <div class="description">Invite members</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui form">
+        <div class="ui header">
+            创建新的 organization
+        </div>
+        <div>
+            <p>
+                Organization 可以是你的团队以更友好的方式共同协作 api 的创建、测试、分发等
+            </p>
+        </div>
+        <div class="ui divider"></div>
+        <div class="fields">
+            {{ui-form-input label="name"}}
+        </div>
+        {{ui-form-input label="description(optional)"}}
+        <button class="ui green button" {{action "createOrg"}} >Create new organization</button>
+    </div>
+</div>
+

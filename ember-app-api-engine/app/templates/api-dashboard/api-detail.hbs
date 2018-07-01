@@ -1,0 +1,23 @@
+<div class="ui form">
+    {{ui-form-input label="Api name"}}
+    {{ui-form-input label="Path"}}
+    <div class="field">
+        <label for="">Method</label>
+        {{ui-select label="Method" options=methodOptions value=(mut methodValue) }}
+    </div>
+    <div class="field">
+        <label for="">Group</label>
+        {{ui-select label="Group" options=groupOptions value=(mut groupValue)}}
+    </div>
+</div>
+
+<div class="ui header">
+    Query Paremeter
+</div>
+{{ui-api-query-string}}
+
+
+<div class="ui header">
+    Headers
+</div>
+{{ui-api-header}}

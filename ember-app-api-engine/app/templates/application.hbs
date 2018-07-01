@@ -1,0 +1,35 @@
+<div class="ui blue inverted menu" style="border-radius:0 !important" >
+    <div class="ui container">
+        {{#link-to "index" class="item" }}api-engine{{/link-to}}
+        <div class="right menu">
+            <a class="item">
+                Notification
+            </a>
+            {{#ui-dropdown-menu class="item" theme="" }}
+                <div class="text">
+                    <i class="plus icon"></i>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    {{#link-to "new-workspace" class="item" }}New Workspace{{/link-to}}
+                    {{#link-to "new-organization" class="item" }}New Organization{{/link-to}}
+                </div>
+            {{/ui-dropdown-menu}}
+            {{#ui-dropdown-menu class="item" theme="" }}
+                <div class="text">
+                    <img src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=40" class="ui mini image" alt="zhyq0826">
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    {{#link-to "settings" class="item" }}
+                        <h4 class="ui header">Settings</h4>
+                    {{/link-to}}
+                    <a class="item">
+                        Logou out
+                    </a>
+                </div>
+            {{/ui-dropdown-menu}}
+        </div>
+    </div>
+</div>
+{{outlet}}

@@ -1,0 +1,15 @@
+<div class="ui container">
+    <div class="ui grid">
+        <div class="four wide column">
+            <div class="ui vertical pointing menu">
+                {{#link-to "settings.profile" class="item" }}Profile{{/link-to}}
+                {{#link-to "settings.account" class="item" }}Account{{/link-to}}
+                {{#link-to "settings.projects" class="item" }}Projects{{/link-to}}
+                {{#link-to "settings.organizations" class="item" }}Organizations{{/link-to}}
+            </div>
+        </div>
+        <div class="twelve wide column">
+            {{outlet}}
+        </div>
+    </div>
+</div>

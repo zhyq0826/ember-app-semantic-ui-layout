@@ -1,5 +1,5 @@
 import EmberObject from '@ember/object';
-import {
+import model, {
     DS
 } from '../mixins/model';
 
@@ -7,7 +7,7 @@ const {
     attr
 } = DS;
 
-export default EmberObject.extend({
+export default EmberObject.extend(model, {
     url: '/v1/user',
     init() {
         this._super(...arguments);
@@ -19,6 +19,9 @@ export default EmberObject.extend({
             'area_id': attr('string'),
             'town_id': attr('string'),
             'country_id': attr('string'),
+            'user': attr({defaultValue: function(){
+                {name: '', 'gender': ''};
+            }})
         }
     }
 });
